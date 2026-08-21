@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TechPulse AI Bootcamp enrollment form" />
+  <title>Enroll — TechPulse AI Bootcamp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="enroll-page">
+  <header class="enroll-header">
+    <div class="enroll-header-inner">
+      <a href="index.html" class="logo" aria-label="TechPulse home">
+        <img src="logo.jpeg" alt="TechPulse logo" />
+        <div>
+          <strong>TechPulse</strong>
+          <span>AI BOOTCAMP</span>
+        </div>
+      </a>
+
+      <div class="header-progress" aria-live="polite">
+        <span>Enroll</span>
+        <span class="header-separator">·</span>
+        <span>Step 2 of 3</span>
+        <span class="live-pill"><span class="live-dot"></span>LIVE</span>
+      </div>
+
+      <button type="button" class="back-btn top-back" onclick="history.back()">← Back</button>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="form-card" aria-live="polite">
+      <div class="steps" aria-label="Enrollment progress">
+        <div class="step is-active" data-step-indicator="1">
+          <span class="num">1</span>
+          <span>YOUR DETAILS</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-step-indicator="2">
+          <span class="num">2</span>
+          <span>SEND PAYMENT</span>
+        </div>
+        <div class="line"></div>
+        <div class="step" data-step-indicator="3">
+          <span class="num">3</span>
+          <span>UPLOAD PROOF</span>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="1">
+        <span class="pill">STEP 1 OF 3</span>
+        <h1 class="title">Reserve Your Seat.</h1>
+        <p class="sub">Enroll before the price hits Rs 8,999</p>
+
+        <form id="detailsForm" novalidate>
+          <div class="field">
+            <label for="name">FULL NAME</label>
+            <input id="name" name="fullName" type="text" placeholder="e.g. Ali Khan" aria-invalid="false" />
+            <p class="error-message" data-error-for="name" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">EMAIL</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" aria-invalid="false" />
+            <p class="error-message" data-error-for="email" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="whatsapp">WHATSAPP NUMBER</label>
+            <input id="whatsapp" name="whatsapp" type="tel" placeholder="03XXXXXXXXX" aria-invalid="false" />
+            <p class="error-message" data-error-for="whatsapp" aria-live="polite"></p>
+          </div>
+
+          <button class="primary-btn" type="submit">Continue to Payment →</button>
+        </form>
+
+        <p class="privacy">🔒 Your details are private and used only to send your access.</p>
+      </div>
+
+      <div class="panel hidden" data-panel="2">
+        <span class="pill">STEP 2 OF 3</span>
+        <h1 class="title">Send Your Payment.</h1>
+        <p class="sub">Send exactly <strong>Rs. 1,900</strong> to the account below.</p>
+
+        <div class="payment-grid">
+          <article class="payment-card">
+            <div class="payment-card-header">
+              <span class="method-label">METHOD</span>
+              <span class="verified-badge">Verified ✓</span>
+            </div>
+            <div class="payment-method">Easypaisa</div>
+
+            <div class="account-row">
+              <div>
+                <span class="detail-label">ACCOUNT TITLE</span>
+                <strong>Muhammad Shehzad</strong>
+              </div>
+              <button type="button" class="copy-btn" data-copy="Muhammad Shehzad">Copy</button>
+            </div>
+
+            <div class="account-row">
+              <div>
+                <span class="detail-label">ACCOUNT NUMBER</span>
+                <strong>03150995209</strong>
+              </div>
+              <button type="button" class="copy-btn" data-copy="03150995209">Copy</button>
+            </div>
+          </article>
+
+          <article class="payment-card">
+            <div class="payment-card-header">
+              <span class="method-label">METHOD</span>
+              <span class="verified-badge">Verified ✓</span>
+            </div>
+            <div class="payment-method">JazzCash</div>
+
+            <div class="account-row">
+              <div>
+                <span class="detail-label">ACCOUNT TITLE</span>
+                <strong>Muhammad Shehzad</strong>
+              </div>
+              <button type="button" class="copy-btn" data-copy="Muhammad Shehzad">Copy</button>
+            </div>
+
+            <div class="account-row">
+              <div>
+                <span class="detail-label">ACCOUNT NUMBER</span>
+                <strong>03150995209</strong>
+              </div>
+              <button type="button" class="copy-btn" data-copy="03150995209">Copy</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="amount-card">
+          <span>AMOUNT</span>
+          <strong>Rs. 1,900</strong>
+        </div>
+
+        <div class="summary-box">Method: Easypaisa / JazzCash wallet transfer.</div>
+
+        <button class="primary-btn" id="paymentDone" type="button">I've Sent the Payment — Continue →</button>
+        <button type="button" class="secondary-back" id="backToStepOne">← Back</button>
+        <p class="privacy">🔒 Secure · One-time payment · Lifetime access</p>
+      </div>
+
+      <div class="panel hidden" data-panel="3">
+        <span class="pill">STEP 3 OF 3</span>
+        <h1 class="title">Upload Payment Proof</h1>
+        <p class="sub">Submit your payment screenshot, screenshot, or PDF for review.</p>
+
+        <div class="field">
+          <label for="proof">PAYMENT PROOF</label>
+          <div class="file-upload-wrap">
+            <input id="proof" name="proof" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf" />
+          </div>
+          <p id="fileName" class="file-name" aria-live="polite">No file selected.</p>
+          <p id="proofError" class="error-message" aria-live="polite"></p>
+        </div>
+
+        <button class="primary-btn" id="finish" type="button">Submit Enrollment</button>
+        <div id="successState" class="success-state hidden" aria-live="polite">
+          <h2>Enrollment request received.</h2>
+          <p>Your payment proof has been submitted for review.</p>
+          <p id="successDetails" class="success-details"></p>
+          <a
+            href="https://wa.me/923185678127?text=Hi%20TechPulse%20AI%20Bootcamp%2C%20I%20have%20submitted%20my%20enrollment%20payment%20proof.%20Please%20confirm%20my%20enrollment."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="whatsapp-contact-button"
+          >
+            <span class="whatsapp-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M20.52 3.48A11.45 11.45 0 0 0 12.06 0C5.52 0 .14 5.38.14 11.92c0 2.1.55 4.15 1.6 5.95L0 24l6.3-1.65a11.94 11.94 0 0 0 5.76 1.75h.01c6.54 0 11.92-5.38 11.92-11.92 0-3.18-1.24-6.17-3.48-8.4ZM12.06 21.8c-1.86 0-3.68-.5-5.27-1.44l-.38-.22-3.73.98 1-3.64-.25-.37A9.82 9.82 0 0 1 2.1 11.92a9.97 9.97 0 1 1 17.21 7.08 9.84 9.84 0 0 1-7.25 2.8Zm5.38-7.38c-.29-.15-1.73-.85-2-.95-.27-.1-.46-.15-.66.15-.2.3-.77.96-.96 1.15-.18.2-.35.22-.64.07-.29-.15-1.23-.45-2.35-1.45-.87-.78-1.45-1.74-1.62-2.03-.18-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.49-.66-.5l-.56-.01c-.2 0-.52.07-.8.38-.28.3-1.08 1.06-1.08 2.58s1.1 2.99 1.25 3.2c.15.2 2.16 3.28 5.22 4.58.73.31 1.3.5 1.75.64.73.23 1.4.2 1.92.12.59-.09 1.73-.71 1.96-1.39.23-.68.23-1.27.16-1.39-.06-.12-.22-.2-.5-.35Z"/>
+              </svg>
+            </span>
+            Contact Us on WhatsApp →
+          </a>
+          <p class="backend-note">This frontend flow is ready to connect to a backend or admin workflow when real payment verification and submission APIs are available.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section" aria-label="Frequently asked questions">
+      <div class="faq-header">Frequently Asked Questions</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How will I receive the course?</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Once your payment is confirmed, you will receive access details and course updates through your email and WhatsApp contact information.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Is this a 2026 course?</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Yes. This bootcamp is structured for the current 2026 enrollment cycle and is updated with the latest AI workflows and delivery strategy.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Is this a recorded course?</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Yes. It is designed as a practical recorded course with step-by-step lessons and implementation guidance you can follow at your own pace.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How will you update the course?</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            We update the curriculum and community guidance as new tools, workflows, and market trends emerge so the training remains relevant over time.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Who will answer my questions?</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Students receive access support through the bootcamp community and dedicated communication channels for course-related questions.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Refund Policy</span>
+            <span class="faq-icon">⌃</span>
+          </button>
+          <div class="faq-answer" hidden>
+            Refunds are handled according to the enrollment policy communicated at checkout. Please contact support before submitting a claim if you need assistance.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-brand">
+        <img src="logo.jpeg" alt="TechPulse logo" />
+        <div>
+          <strong>TechPulse AI Bootcamp</strong>
+        </div>
+      </div>
+      <p>© 2026 TechPulse AI Bootcamp. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/923185678127?text=Hello%20TechPulse%20AI%20Bootcamp%2C%20I%20want%20to%20enroll." target="_blank" rel="noreferrer" aria-label="WhatsApp contact">WhatsApp</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
