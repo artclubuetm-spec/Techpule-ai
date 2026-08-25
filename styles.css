@@ -231,7 +231,8 @@ input {
 }
 
 .hero-video,
-.video-container iframe {
+.video-container iframe,
+.hero-video video {
   width: 100%;
   height: 100%;
   display: block;
@@ -243,7 +244,8 @@ input {
 }
 
 .hero-video iframe,
-.video-container iframe {
+.video-container iframe,
+.hero-video video {
   border: 0;
   width: 100%;
   height: 100%;
